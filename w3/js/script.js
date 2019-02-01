@@ -33,3 +33,23 @@ function isPalindrome(str) {
     return str === str.split("").reverse().join("") ? true : false;
 }
 console.log(isPalindrome("noon"));
+
+//generate Random(mix,max)
+
+function generateRandom(min,max) {
+  return Math.random() * (max - min) + min;
+}
+console.log(Math.round(generateRandom(15,20)));
+
+// default value for MIN = 0; for MAX = 1000;
+function getRandomInt(min, max) {
+  min = Math.ceil(0);
+  max = Math.floor(1000);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+console.log(getRandomInt());
+
+// Reload poage function;
+function ReloadPage(){
+  location.reload();
+}
