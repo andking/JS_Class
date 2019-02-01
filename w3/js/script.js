@@ -54,3 +54,8 @@ console.log(getRandomInt());
 function ReloadPage(){
   location.reload();
 }
+// Remove all spaces
+var sample_str =  "PB 10 CV 2662";
+console.log(sample_str);
+var new_str = sample_str.split(" ").join("");
+console.log(new_str);
