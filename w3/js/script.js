@@ -1,3 +1,4 @@
+"use strict"
 // console.log("mom");
 //
 // console.log(isParilomic("concordia"));
@@ -43,8 +44,8 @@ console.log(Math.round(generateRandom(15,20)));
 
 // default value for MIN = 0; for MAX = 1000;
 function getRandomInt(min, max) {
-  let min = Math.ceil(0);
-  let max = Math.floor(1000);
+  var min = Math.ceil(0);
+  var max = Math.floor(1000);
   return Math.floor(Math.random() * (max - min)) + min;
 }
 console.log(getRandomInt());
