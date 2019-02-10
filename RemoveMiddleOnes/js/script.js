@@ -24,6 +24,7 @@ function validate() {
 }
 
 function push() {
+  validate();
 	  let value = document
 	    .querySelector('#MyInput')
 	    .value;
@@ -33,6 +34,7 @@ function push() {
 	}
 
 function noMiddleElement() {
+  validate();
   myArray.splice(2,1)
   showArray2();
   reset();
