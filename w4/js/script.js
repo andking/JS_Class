@@ -32,18 +32,22 @@ function popFunction() {
   reset();
 }
 
+function unshift() {
+    validate();
+    let value = document
+	    .querySelector('#myId')
+	    .value;
+  myArray.unshift(value);
+    // showArray();
+    reset();
+}
+
 function shift() {
 myArray.shift();
     showArray();
     reset();
 }
 
-function unshift() {
-    validate();
-  myArray.unshift(value);
-    // showArray();
-    reset();
-}
 
 function reverse() {
   myArray.reverse();
