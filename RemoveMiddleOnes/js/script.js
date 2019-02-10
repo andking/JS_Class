@@ -13,6 +13,16 @@ function reset() {
   document.querySelector("#MyInput").value = "";
 }
 
+function validate() {
+  var x = document
+  .querySelector('#MyInput')
+  .value;
+  if (x == "") {
+    alert("Input must be filled out");
+    return false;
+  }
+}
+
 function push() {
 	  let value = document
 	    .querySelector('#MyInput')
@@ -23,7 +33,6 @@ function push() {
 	}
 
 function noMiddleElement() {
-
   myArray.splice(2,1)
   showArray2();
   reset();
