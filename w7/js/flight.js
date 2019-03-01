@@ -22,13 +22,21 @@ function Flight(airline,
   this.priceInCad = function () {
     return this.priceInUSD*1.32;
   }
+
+  this.durationTime = function () {
+    return (this.arrTime - this.depTime)/(1000*60*60);
+  }
+
+  this.numberOfOverNights  = function () {
+    return (this.arrTime.getDate() - this.depTime.getDate());
+  }
 }
 
 let torAirport = new Airport('Peterson', 'Toronto', 'YYZ');
 
 let myFancyFlight = new Flight('Air Canada',
-        new Date(),
-        new Date(),
+        new Date('2019-03-17T22:24:00'),
+        new Date('2019-03-18T03:45:00'),
         [torAirport],
         8500.58,
         mtlAirport,
@@ -41,3 +49,6 @@ console.log(myFancyFlight.stops[0].name);
 console.log(myFancyFlight.arrTime);
 console.log(myFancyFlight.numberOfStops());
 console.log(myFancyFlight.priceInCad());
+console.log(myFancyFlight.arrTime.getHours());
+console.log(myFancyFlight.durationTime());
+console.log(myFancyFlight.numberOfOverNights());
