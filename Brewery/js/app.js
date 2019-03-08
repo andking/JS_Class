@@ -2,8 +2,8 @@ function reqListener() {
   let text = '';
   let myArray = JSON.parse(this.responseText);
 
-  myArray.forEach(function(name) {
-      text += '<li>' + name + '</li>\n'
+  myArray.forEach(function(bar) {
+      text += '<li>' + bar.name + '</li>\n'
   });
   document.querySelector('#outputData')
     .innerHTML = text;
